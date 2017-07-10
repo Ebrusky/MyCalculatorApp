@@ -1,0 +1,134 @@
+	<!DOCTYPE html>
+	<html>
+	<head>
+	<title>My Calculator</title>
+	<style type="text/css" all="media">
+	h2{
+	text-shadow: 2px 2px 10px white; 
+	float:left;
+	z-index:2;
+	color:peru;
+	position:relative; 
+	left:395px;
+	top:50px; 
+	}
+	fieldset{
+	border:10px cadetblue solid;
+	border-top:80px cadetblue solid;
+	border-bottom:15px cadetblue solid;
+	position:relative; 
+	left:100px;
+	top:50px;
+	float:left;
+	border-radius:10px;
+	width:310px; 
+	height:410px; 
+	background-color:darkgray;
+	}
+	/*the display screen code*/
+	input[type="text"]{
+	font-size:35px;
+	text-align:right;
+	border-left: 5px #222 solid; 
+	border-top: 5px #6f6f6f solid;
+	background-color:#bccd95;
+	width:310px;
+	height:50px
+	}
+	/*main button code*/
+	input[type="button"]{
+	font-weight:bold;
+	color:white;
+	padding:3px;
+	background-color:teal;
+	border:black 2px solid;
+	border-top:2px #6f6f6f solid;
+	border-left:3px #6f6f6f solid;
+	font-size:1.3em;
+	border-radius:10px;
+	width:65px; 
+	height:45px;
+	margin-left:5px;
+	margin-right:5px;
+	margin-bottom:3px;
+	margin-top:20px;
+	}
+	input[type="button"]:active{
+	border-bottom:#222 6px solid;
+	border-left:#222 1px solid;
+	border-right:#222 1px solid;
+	border-top:#222 2px solid;
+	}
+	input[type="button"].redbutton{
+	font-size:1.6em;
+	color:white;
+	background-color:red;
+	}
+	
+	input[type="button"]#equalsbutton{	
+	color:#222;
+	}
+	input[type="button"]#resetbutton{ 
+	background-color:darkgoldenrod;
+	color:white;
+	}
+	input[type="button"].fbutton{
+	color:#222;
+	background-color:darkkhaki;
+	}
+	
+	
+	</style>
+	<script type="text/javascript">
+	<!--
+	function c(val){
+	document.getElementById("d").value=val;
+	}
+	function math(val){
+	document.getElementById("d").value+=val;
+	}
+	function e(){
+	try{
+	c(eval(document.getElementById("d").value))
+	}
+	catch(e){
+	c('Error')
+	}
+	}
+	//-->
+	</script>
+	</head>
+	<body style="background-color:whitestone">
+
+	<form>
+	<h2><em>Godspower's Calculator</em></h2>
+	<fieldset>
+	<input type="text" readonly size="18" id="d" >
+	<input type="button" class="fbutton"   onclick='c("not defined ")' value="mrc" />
+	<input type="button"   class="fbutton"   onclick='c("not defined ")'  value="m+" />
+	<input type="button"   class="fbutton"   onclick='c("not defined ")'  value="m-" />
+	<input type="button"   onclick='math("/")' class="redbutton"  value="/" />
+	<br />
+	<input type="button"   onclick='math("7")'  value="7" />
+	<input type="button"   onclick='math("8")'  value="8" />
+	<input type="button"   onclick='math("9")'  value="9" />
+	<input type="button"   onclick='math("*")' class="redbutton"  value="*" />
+	<br />
+	<input type="button"  onclick='math("4")'  value="4" />
+	<input type="button"   onclick='math("5")'  value="5" />
+	<input type="button"  onclick='math("6")'  value="6" />
+	<input type="button"     onclick='math("-")'class="redbutton"  value="-" />
+	<br />
+	<input type="button"  onclick='math("1")'  value="1" />
+	<input type="button"  onclick='math("2")'  value="2" />
+	<input type="button"   onclick='math("3")'  value="3" />
+	<input type="button"    onclick='math("+")' class ="redbutton"  value="+" />
+	<br />
+	<input type="button"   onclick='math("0")'  value="0" />
+	<input type="button"   onclick='math(".")'  value="." />
+	<input type="button" id="resetbutton" onclick='c ("")'  value="C" />
+	<input type="button"  id="equalsbutton"  onclick='e()' value="=" />
+	</fieldset>
+	</form>
+	</body>
+	</html>
